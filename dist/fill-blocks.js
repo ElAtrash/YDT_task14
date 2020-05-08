@@ -1,19 +1,21 @@
-function getInputValue() {
+getInputValue = () =>{
   let inputValue = document.getElementById("user-input").value;
-  if (inputValue == null || inputValue == ""){
+
+  if (inputValue == null || inputValue == "") {
     alert("Please Fill The Field!");
   }
+
   return inputValue;
 }
 
-function getRandomElement() {
+getRandomElement = () => {
   let elementsId = ["block-1", "block-2", "block-3", "block-4", "block-5"];
   let randomElement = elementsId[Math.floor(Math.random() * elementsId.length)];
   return randomElement;
 }
 
-function inputValueToElement() {
-  document.getElementById(getRandomElement()).textContent=getInputValue();
+inputValueToElement = () => {
+  document.getElementById(getRandomElement()).textContent = getInputValue();
 }
 
 let button = document.getElementById("button");
